@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikipedia Search</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        input { width: 400px; padding: 5px; }
+        button { padding: 5px 10px; }
+        .result { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Wikipedia Search System</h2>
+    <form method="post">
+        <input name="query" placeholder="Enter search query..." required>
+        <select name="mode">
+            <option value="keyword">Keyword Search</option>
+            <option value="semantic">Semantic Search</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+    {% if results %}
+        {% for r in results %}
+            <div class="result">
+                <h3>{{ r.title }}</h3>
+                <p>{{ r.content[:300] }}...</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
