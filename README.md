@@ -17,7 +17,7 @@ A hands-on **Information Retrieval (IR) project** combining **keyword search**, 
    - Useful for queries with synonyms or conceptual matches.
 
 3. **Web Interface**
-   - Built with **Flask**.
    - User-friendly form to input queries.
    - Choose between **Keyword Search** and **Semantic Search**.
    - Displays top results with article title and content preview.
+
